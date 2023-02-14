@@ -54,6 +54,39 @@ namespace WinFormsApp1
             return "";
         }
 
+        private async Task<string> GetPassageAudio(string verseReference)
+        {
+            string verses = string.Empty;
+            string query = string.Empty;
+
+            verseReference = "Matthew 27:32-66";
+
+
+            query = $"?q={verseReference}&include-passage-references=false&include-verse-numbers=true&include-footnotes=false&include-footnote-body=false&include-short-copyright=false&include-copyright=false&include-passage-horizontal-lines=false&include-heading-horizontal-lines=false&include-headings=true&include-selahs=true&indent-paragraphs=true&indent-poetry=true&indent-declares=0&indent-psalm-doxology=0&line-length=50";
+
+            try
+            {
+                var response = await _HttpClient.GetStringAsync(ESV_URL + "?q=ps1");
+                //JObject passageObject = JObject.Parse(response);
+
+                //verses = passageObject["passages"].ToString();
+
+                //verses = verses.Replace("\\n", Environment.NewLine);
+                Debug.WriteLine(response.ToString());
+                //test(verses);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+            return "";
+        }
         private string GetVerseReferenceFromMp3(string path)
         {
             string verseReference = "";
