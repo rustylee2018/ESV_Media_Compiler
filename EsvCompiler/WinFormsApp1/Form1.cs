@@ -28,15 +28,19 @@ namespace WinFormsApp1
             verseReference = "Matthew 27:32-66";
 
 
-            query = $"?q={verseReference}&include-passage-references=false&include-verse-numbers=true&include-footnotes=false&include-footnote-body=false&include-short-copyright=false&include-copyright=false&include-passage-horizontal-lines=false&include-heading-horizontal-lines=false&include-headings=true&include-selahs=true&indent-paragraphs=true&indent-poetry=true&indent-declares=0&indent-psalm-doxology=0&line-length=50";
+            query = $"?q={verseReference}&include-passage-references=false&include-verse-numbers=true&include-footnotes=false&include-footnote-body=false&include-short-copyright=false&include-copyright=false&include-passage-horizontal-lines=false&include-heading-horizontal-lines=false&include-headings=true&include-selahs=true&indent-paragraphs=true&indent-poetry=true&indent-declares=0&indent-psalm-doxology=0";
 
             try
             {
                 var response = await _HttpClient.GetStringAsync(ESV_URL + query);
                 JObject passageObject = JObject.Parse(response);
 
-                verses = passageObject["passages"].ToString();
+                if (passageObject["passages"] != null)
+                {
+                    verses = passageObject["passages"].ToString();
+                }
 
+                verses = verses.TrimStart('[', '\r', '\n', ' ', ' ', '"').TrimEnd('"', '\r', '\n', ']');
                 verses = verses.Replace("\\n", Environment.NewLine);
                 Console.WriteLine(verses);
                 test(verses);
@@ -62,8 +66,7 @@ namespace WinFormsApp1
             verseReference = "Matthew 27:32-66";
 
 
-            query = $"?q={verseReference}&include-passage-references=false&include-verse-numbers=true&include-footnotes=false&include-footnote-body=false&include-short-copyright=false&include-copyright=false&include-passage-horizontal-lines=false&include-heading-horizontal-lines=false&include-headings=true&include-selahs=true&indent-paragraphs=true&indent-poetry=true&indent-declares=0&indent-psalm-doxology=0&line-length=50";
-
+ 
             try
             {
                 var response = await _HttpClient.GetStringAsync(ESV_URL + "?q=ps1");
