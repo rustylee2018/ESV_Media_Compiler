@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "8NKmw9XGNlp1eh0PkSM216G0Jk6+jJb+827B+22nZOVWqBC0CnWrABRaRL5Ykx/+CXhtABYnu6JeBxiHJuSc2w==",
+  "dgSpecHash": "CPwOiERGqpejUmrrlNadxRoplXCc9V3Ds4lbly5JmGFZjmZJObB0fQ3bwVJ9fn8z4RdtE4wDs1gHxtpHU4uCnQ==",
   "success": true,
   "projectFilePath": "E:\\gitHub\\ESV_Media_Compiler\\EsvCompiler\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\russ\\.nuget\\packages\\microsoft.data.sqlite\\7.0.3\\microsoft.data.sqlite.7.0.3.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.3\\microsoft.data.sqlite.core.7.0.3.nupkg.sha512",
     "C:\\Users\\russ\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "C:\\Users\\russ\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\russ\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []
